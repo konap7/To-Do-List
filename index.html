@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+
+    <script lang="JavaScript">
+        function AddToList() {
+            var item = document.getElementById('item').value;
+            var list = document.getElementById('list');
+            var listEntry = document.createElement('li');
+
+            document.getElementById("item").value = '';
+            
+            listEntry.appendChild(document.createTextNode(item));
+            list.appendChild(listEntry);
+        }
+    </script>
+
+</head>
+<body>
+    <h1>To-Do List</h1>
+
+    <label for="item">Item:</label>
+    <input type="text", id="item", name="item">
+    <input type="submit" onclick="AddToList()" value="Add">
+        
+    <br><br>
+
+    <label for="list">List items:</label>
+    <p><ol id="list"></ol></p>
+
+</body>
+</html>
